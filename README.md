@@ -62,14 +62,14 @@ WHERE
 
 The following SQL queries were developed to answer specific business questions:
 
-1. **Write a SQL query to retrieve all columns for users who goes to gym on January Month**:
+1. **Below is the SQL query to retrieve all columns for users who goes to gym on January Month**:
 ```sql
 SELECT *
 FROM Fitness_Tracker_Data
 WHERE month(Date) = 01;
 ```
 
-2. **Write a SQL query to retrieve all data where the workout_type is 'Cardio' and the Calories_burned more than 500 in the month of March month**:
+2. **Below is the SQL query to retrieve all data where the workout_type is 'Cardio' and the Calories_burned more than 500 in the month of March month**:
 ```sql
 SELECT *
 FROM Fitness_Tracker_Data
@@ -79,7 +79,7 @@ and calories_burned > 500
 and month(date) = 03;
 ```
 
-3. **Write a SQL query to calculate the total calories_burned for each workout_type.**:
+3. **Below is the SQL query to calculate the total calories_burned for each workout_type.**:
 ```sql
 SELECT 
 workout_type, 
@@ -88,7 +88,7 @@ FROM Fitness_Tracker_Data
 group by workout_type;
 ```
 
-4. **Write a SQL query to find the average steps of users whose workout is strength**:
+4. **Below is the SQL query to find the average steps of users whose workout is strength**:
 ```sql
 SELECT avg(steps) as Avg_Steps, Workout_Type
 FROM Fitness_Tracker_Data
@@ -96,14 +96,14 @@ where workout_type = 'strength'
 group by workout_type;
 ```
 
-5. **Write a SQL query to find all user_ids where the steps count is greater than 10000.**:
+5. **Below is the SQL query to find all user_ids where the steps count is greater than 10000.**:
 ```sql
 SELECT user_id 
 from fitness_tracker_data
 where steps > 10000
 ```
 
-6. **Write a SQL query to find the top 1 based on steps under each workout_type and on feb month**:
+6. **Below is the SQL query to find the top 1 based on steps under each workout_type and on feb month**:
 ```sql
 SELECT TOP 1  SUM(STEPS) as steps, workout_type
 FROM fitness_tracker_data
@@ -112,7 +112,7 @@ GROUP BY workout_type
 ORDER BY steps DESC;
 ```
 
-7. **Write a SQL query to calculate the average calories burns for each workout type. Find out highest workout type in each month**:
+7. **Below is the SQL query to calculate the average calories burns for each workout type. Find out highest workout type in each month**:
 ```sql
 
 WITH cte AS (
@@ -136,7 +136,7 @@ WHERE
     rank = 1;
 
 ```
-8. **Write a SQL query to find the top 5 users based on the highest calories burned**:
+8. **Below is the SQL query to find the top 5 users based on the highest calories burned**:
 ```sql
 
 select top 5 user_id, calories_burned
@@ -144,7 +144,7 @@ from fitness_tracker_data
 order by calories_burned desc
 
 ```
-9. **Write a SQL query to define user as person who done less exercise - calories less than 200,
+9. **Below is the SQL query to define user as person who done less exercise - calories less than 200,
 medium exercise - calories 200 to 500, high exercise - calories greater than 500**:
 ```sql
 
